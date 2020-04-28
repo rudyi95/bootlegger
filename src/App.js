@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./Components/Header/Header.js";
+import ProductList from "./Components/ProductList/ProductList";
+import { Switch, Route, BrowserRouter, HashRouter } from "react-router-dom";
+import Menu from "./Components/Menu/Menu";
+import CartDialog from "./Components/CartDialog/CartDialog";
+import Details from "./Components/Details/Details";
+import Order from "./Components/Order/Order";
+import Login from "./Components/Login/Login";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import Footer from "./Components/Footer/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter basename="/bootlegger-online">
+        <div className="app">
+          <Header />
+          <div className="app-body">
+            <Menu />
+            <div className="content">
+              <CartDialog />
+              <Switch>
+                <Route path="/" exact component={ProductList} />
+                <Route path="/details/:id" component={Details} />
+                {/* <Route path="/login" component={Login} />
+                <ProtectedRoute path="/order" component={Order} /> */}
+                {/* <Route component={ProductList} /> */}
+              </Switch>
+            </div>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
