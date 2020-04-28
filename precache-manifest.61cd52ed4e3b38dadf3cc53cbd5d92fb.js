@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c36dc7e276f87dda04ab4a83ff84b1e9",
+    "revision": "17bd456efea9df7d32bb40768bd93ce6",
     "url": "/bootlegger/index.html"
   },
   {
-    "revision": "75a9746d585a68d6edbe",
+    "revision": "ff73e1c6786d5e75cea6",
     "url": "/bootlegger/static/css/main.2d20b264.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bootlegger/static/js/2.d94e0245.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "75a9746d585a68d6edbe",
-    "url": "/bootlegger/static/js/main.d94b8539.chunk.js"
+    "revision": "ff73e1c6786d5e75cea6",
+    "url": "/bootlegger/static/js/main.6e96650d.chunk.js"
   },
   {
     "revision": "d634330089611a40982f",
