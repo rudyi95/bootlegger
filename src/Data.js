@@ -2123,7 +2123,7 @@ const categories = [
 
 // Data for rendering menu.
 const dataForTheMenu = [
-  { name: "Головна", url: "/shop/", icon: "home", id: 0 },
+  { name: "Головна", url: "/", icon: "home", id: 0 },
   {
     name: "Категорії",
     id: 1,
@@ -2131,7 +2131,7 @@ const dataForTheMenu = [
       return {
         name: x.name,
         id: 2 + i,
-        url: "/shop/?category=" + x.name,
+        url: "/?category=" + x.name,
         icon: x.icon
       };
     })
