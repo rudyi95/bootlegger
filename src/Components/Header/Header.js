@@ -18,8 +18,8 @@ import Auth from "../../Auth";
 import { categories } from "../../Data";
 import PhoneIcon from '@material-ui/icons/Phone';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Person from "@material-ui/icons/PersonOutline";
-import Avatar from "@material-ui/core/Avatar";
+/* import Person from "@material-ui/icons/PersonOutline";
+import Avatar from "@material-ui/core/Avatar"; */
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";

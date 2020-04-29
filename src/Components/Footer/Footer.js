@@ -23,30 +23,30 @@ class Footer extends Component {
             Покупка
           </div>
           <NavLink
-            to={"/payment"}
+            to={"/"}  // "/payment"
             exact
-            style={{
-              textDecoration: "none",
-              color: "rgb(32, 32, 34)"
-            }}
             activeStyle={{
+              textDecoration: "none",
+              color: "rgb(32, 32, 34)"  // style
+            }}
+            /* activeStyle={{
               color: "#4282ad",
               textDecoration: "underline"
-            }}
+            }} */
           >
             <div className="footerItem">Умови оплати</div>
           </NavLink>
           <NavLink
-            to={"/delivery"}
+            to={"/"} // "/delivery"
             exact
-            style={{
+            activeStyle={{
               textDecoration: "none",
               color: "rgb(32, 32, 34)"
             }}
-            activeStyle={{
+            /* activeStyle={{
               color: "#4282ad",
               textDecoration: "underline"
-            }}
+            }} */
           >
             <div className="footerItem">Доставка</div>
           </NavLink>
@@ -58,16 +58,16 @@ class Footer extends Component {
             Про нас
           </div>
           <NavLink
-            to={"/info"}
+            to={"/"} // "/info"
             exact
-            style={{
+            activeStyle={{
               textDecoration: "none",
               color: "rgb(32, 32, 34)"
             }}
-            activeStyle={{
+            /* activeStyle={{
               color: "#4282ad",
               textDecoration: "underline"
-            }}
+            }} */
           >
             <div className="footerItem">Інформація про магазин</div>
           </NavLink>

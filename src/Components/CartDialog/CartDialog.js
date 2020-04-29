@@ -7,14 +7,14 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { connect } from "react-redux";
-import { showCartDlg, setCheckedOutItems } from "../../Redux/Actions";
+import { showCartDlg, /* setCheckedOutItems */ } from "../../Redux/Actions";
 import { withRouter } from "react-router-dom";
 import CartRow from "./CartRow";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCartOutlined";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import PhoneIcon from '@material-ui/icons/Phone';
-import IconButton from "@material-ui/core/IconButton";
+/* import IconButton from "@material-ui/core/IconButton"; */
 
 const mapStateToProps = state => {
   return { open: state.showCartDialog, items: state.cartItems };

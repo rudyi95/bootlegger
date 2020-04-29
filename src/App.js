@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header.js";
 import ProductList from "./Components/ProductList/ProductList";
-import { Switch, Route, BrowserRouter, HashRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Menu from "./Components/Menu/Menu";
 import CartDialog from "./Components/CartDialog/CartDialog";
 import Details from "./Components/Details/Details";
-import Order from "./Components/Order/Order";
+/* import Order from "./Components/Order/Order";
 import Login from "./Components/Login/Login";
-import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute"; */
 import Footer from "./Components/Footer/Footer";
 
 class App extends Component {
