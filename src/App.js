@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename="/bootlegger">
+      <BrowserRouter basename="/">
         <div className="app">
           <Header />
           <div className="app-body">
