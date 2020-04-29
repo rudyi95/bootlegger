@@ -24,7 +24,7 @@ class App extends Component {
             <div className="content">
               <CartDialog />
               <Switch>
-                <Route path="/shop/" exact component={ProductList} />
+                <Route path="/" exact component={ProductList} />
                 <Route path="/shop/details/:id" component={Details}>
                   
                 </Route>
