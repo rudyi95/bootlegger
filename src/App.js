@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header.js";
 import ProductList from "./Components/ProductList/ProductList";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter, useRouteMatch } from "react-router-dom";
 import Menu from "./Components/Menu/Menu";
 import CartDialog from "./Components/CartDialog/CartDialog";
 import Details from "./Components/Details/Details";
@@ -12,9 +12,11 @@ import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute"; */
 import Footer from "./Components/Footer/Footer";
 
 class App extends Component {
+  
   render() {
+    
     return (
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/shop">
         <div className="app">
           <Header />
           <div className="app-body">
@@ -23,10 +25,17 @@ class App extends Component {
               <CartDialog />
               <Switch>
                 <Route path="/" exact component={ProductList} />
-                <Route path="/details/:id" component={Details} />
+                <Route path="/details/:id" component={Details}>
+                  
+                </Route>
                 {/* <Route path="/login" component={Login} />
                 <ProtectedRoute path="/order" component={Order} /> */}
                 {/* <Route component={ProductList} /> */}
+                <Route
+                component={() => (
+                  <div style={{ padding: 20 }}>not found</div>
+                )}
+              />
               </Switch>
             </div>
           </div>
