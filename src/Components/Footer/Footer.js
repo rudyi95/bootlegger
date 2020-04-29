@@ -25,7 +25,7 @@ class Footer extends Component {
           <NavLink
             to={"/"}  // "/payment"
             exact
-            activeStyle={{
+            style={{
               textDecoration: "none",
               color: "rgb(32, 32, 34)"  // style
             }}
@@ -39,7 +39,7 @@ class Footer extends Component {
           <NavLink
             to={"/"} // "/delivery"
             exact
-            activeStyle={{
+            style={{
               textDecoration: "none",
               color: "rgb(32, 32, 34)"
             }}
@@ -60,7 +60,7 @@ class Footer extends Component {
           <NavLink
             to={"/"} // "/info"
             exact
-            activeStyle={{
+            style={{
               textDecoration: "none",
               color: "rgb(32, 32, 34)"
             }}

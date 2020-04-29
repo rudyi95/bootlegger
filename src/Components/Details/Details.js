@@ -86,11 +86,13 @@ class ConnectedDetails extends Component {
           {this.state.item.name}
         </div>
         <div style={{ display: "flex" }}>
-          <img src={this.state.item.imageUrls[0]} alt="" width={300} height={300}
+          <img src={this.state.item.imageUrls[0]} alt=""
             style={{
+              width: 300,
+              maxHeight: 400,
               border: "1px solid lightgray",
               borderRadius: "5px",
-              objectFit: "cover"
+              backgroundSize: "cover"
             }} />
           <div
             style={{
