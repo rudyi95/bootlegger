@@ -89,7 +89,7 @@ class ConnectedDetails extends Component {
           <img src={this.state.item.imageUrls[0]} alt=""
             style={{
               width: 300,
-              maxHeight: 400,
+              maxHeight: 300,
               border: "1px solid lightgray",
               borderRadius: "5px",
               backgroundSize: "contain"
