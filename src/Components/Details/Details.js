@@ -92,7 +92,7 @@ class ConnectedDetails extends Component {
               maxHeight: 400,
               border: "1px solid lightgray",
               borderRadius: "5px",
-              backgroundSize: "cover"
+              backgroundSize: "contain"
             }} />
           <div
             style={{
