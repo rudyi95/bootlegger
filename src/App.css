@@ -24,6 +24,7 @@ body {
 }
 
 .content {
+  max-width: 1100px;
   position: relative;
   flex: 1;
 }

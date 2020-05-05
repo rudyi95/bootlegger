@@ -1,20 +1,85 @@
+.header {
+    max-width: 1350px;
+    height: 68px;
+}
 
+@media screen and (max-width: 1090px) {
+    .header{
+        width: 414px !important;
+        display: flex;
+        justify-content: space-between !important;
+    }
+    .left-part{
+        margin-left: -16px;
+        width: 200px !important;
+    }
+    .header-menu-btn{
+        margin-left: -35px !important;
+    }
+    .logo{
+        width: 50px !important;
+        height: 35px !important;
+    }
+    .search-txt{
+        width: 100% !important;
+    }
+    .category-search{
+        display: none !important;
+    }
+    .search-btn{
+        margin-left: -10px !important;
+        border: none !important;
+    }
+    .search-btn-txt{
+        display: none;
+    }
+    .search-icon{
+        margin-left: -15px;
+        margin-top: 3px;
+        display: block !important;
+    }
+
+    .right-part{
+        display: flex;
+        justify-content: start !important;
+        margin-right: -17px;
+        width: 110px !important;
+        height: 100% !important;
+        position: relative !important;
+    }
+    .phone-btn {
+        font-size: 15px !important;
+    }
+    .phone-txt {
+        display: none;
+    }
+    .insta-btn {
+        margin-top: 5px !important;
+        margin-left: -10px !important;
+        font-size: 15px !important;
+    }
+    .cart-btn {
+        margin-left: -16px !important;
+        font-size: 15px !important;
+    }
+}
 
 .left-part {
+    padding-left: 40px;
+    width: 70%;
     display: flex;
     flex: 1;
     align-items: center;
 }
-
 .right-part {
+    width: 30%;
     display: flex;
-    width:150px;
     align-items: center;
     justify-content: flex-end;
-
 }
-
-.phone-btn:active{
+.phone-btn:active {
     color: red;
 }
- 
+.search-icon{
+    display: none;
+}

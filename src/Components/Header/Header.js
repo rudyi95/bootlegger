@@ -17,6 +17,7 @@ import cartImage from "../../Images/logo2.png";
 import Auth from "../../Auth";
 import { categories } from "../../Data";
 import PhoneIcon from '@material-ui/icons/Phone';
+import SearchIcon from '@material-ui/icons/Search';
 import InstagramIcon from '@material-ui/icons/Instagram';
 /* import Person from "@material-ui/icons/PersonOutline";
 import Avatar from "@material-ui/core/Avatar"; */
@@ -53,36 +54,44 @@ class ConnectedHeader extends Component {
     let { anchorEl } = this.state;
 
     return (
-      <AppBar
+      <AppBar className="header"
         position="static"
-        style={{ backgroundColor: "#FAFAFB", padding: 10, minWidth: 1100 }}
+        style={{ backgroundColor: "#FAFAFB" }}
       >
         <Toolbar>
-          <div className="left-part">
-            <IconButton
+          <div className="left-part"
+          >
+            <IconButton className="header-menu-btn"
+            style={{
+              marginLeft: -10
+            }}
               onClick={() => {
                 this.props.dispatch(toggleMenu());
               }}
             >
-              <MenuIcon size="medium" />
+              <MenuIcon size="small" />
             </IconButton>
 
             <img
+              className="logo"
               src={cartImage}
               alt={"Logo"}
-              style={{ marginLeft: 10, width: 100, height: 70 }}
-
+              style={{  width: 100, height: 70 }}
             />
+            
             <TextField
-              label="Пошук продукції"
+              className="search-txt"
+              label="Пошук..."
               value={this.state.searchTerm}
               onChange={e => {
                 this.setState({ searchTerm: e.target.value });
               }}
-              style={{ marginLeft: 40, width: 250, marginBottom: 15 }}
+              style={{ marginLeft: 40,  marginBottom: 15}}
             />
 
+
             <Select
+              className="category-search"
               style={{ maxWidth: 200, marginLeft: 20 }}
               value={this.state.categoryFilterValue}
               MenuProps={{
@@ -97,10 +106,9 @@ class ConnectedHeader extends Component {
               {categoryOptions}
             </Select>
 
-            <Button
-              style={{ marginLeft: 20 }}
-              variant="outlined"
-              color="primary"
+            <Button 
+              className="search-btn"
+              style={{ marginLeft: 20, border: "2px #4282ad solid" }}
               onClick={() => {
                 this.props.history.push(
                   "/?category=" +
@@ -111,21 +119,27 @@ class ConnectedHeader extends Component {
               }}
             >
               {" "}
-              Шукати
+              <span className="search-btn-txt">Шукати</span>
+              <span className="search-icon"><SearchIcon 
+              style={{
+                fontSize: "15px",
+                color: "gray"
+              }}
+              /></span>
             </Button>
           </div>
           <div className="right-part">
-          <IconButton className="phone-btn"
+          <IconButton 
           style={{borderRadius: 50 }}
-            href="tel:+380936389876"
-            >
-            <PhoneIcon />
-              +380936389876
+          href="tel:+380936389876"
+          >
+            <PhoneIcon className="phone-btn" />
+              <span className="phone-txt"> +380936389876 </span>
             </IconButton>
 
-            <Button style={{ borderRadius: 50}}>
+            <Button className="insta-btn" style={{ borderRadius: 50}}>
               <a href="https://www.instagram.com/13_bootlegger/">
-              <InstagramIcon style={{marginTop: 5, color: "gray"}} />
+              <InstagramIcon className="insta-btn" style={{marginTop: 5, color: "gray"}} />
               </a>
             </Button>
             
@@ -157,7 +171,7 @@ class ConnectedHeader extends Component {
               }}
             >
               <Badge  badgeContent={this.props.nrOfItemsInCard} color="primary">
-                <ShoppingCartIcon />
+                <ShoppingCartIcon className="cart-btn" />
               </Badge>
             </IconButton>
             <Menu
