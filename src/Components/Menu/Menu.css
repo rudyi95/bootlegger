@@ -1,5 +1,6 @@
 
 .menu-list-container{
+    float: left !important;
     width: 250px !important;
 }
 

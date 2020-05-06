@@ -3,6 +3,8 @@
     margin-bottom:5px;
 }
 .footer-container{
+    position: static;
+    bottom: 0;
     width: 100%;
     max-width: 1350px;
 }

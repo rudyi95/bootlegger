@@ -12,13 +12,14 @@ import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute"; */
 import Footer from "./Components/Footer/Footer";
 
 class App extends Component {
-  
+
   render() {
-    
+
     return (
-      
-        <div className="app">
-          <Header />
+
+      <div className="app">
+        <Header />
+        <div className="app-container">
           <div className="app-body">
             <Menu />
             <div className="content">
@@ -26,22 +27,23 @@ class App extends Component {
               <Switch>
                 <Route path="/" exact component={ProductList} />
                 <Route path="/details/:id" component={Details}>
-                  
+
                 </Route>
                 {/* <Route path="/login" component={Login} />
                 <ProtectedRoute path="/order" component={Order} /> */}
                 {/* <Route component={ProductList} /> */}
                 <Route
-                component={() => (
-                  <div style={{ padding: 20 }}>not found</div>
-                )}
-              />
+                  component={() => (
+                    <div style={{ padding: 20 }}>not found</div>
+                  )}
+                />
               </Switch>
             </div>
           </div>
-          <Footer />
         </div>
-      
+        <Footer />
+      </div>
+
     );
   }
 }
