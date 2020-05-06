@@ -79,7 +79,8 @@ class ConnectedItem extends Component {
                 color="primary"
                 aria-label="Add to shopping cart"
               >
-                <AddShoppingCartIcon  />
+                <AddShoppingCartIcon 
+              className="card-cart-btn" />
               </IconButton>
             </Tooltip>
           </CardActions>

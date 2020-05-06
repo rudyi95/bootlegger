@@ -14,8 +14,12 @@
         margin-top: -30px;
     }
     .card-detail-btn{
-        margin-top: 1px !important;
+        margin-top: 15px !important;
         margin-left: 0 !important;
         font-size: 12px !important;
+    }
+    .card-cart-btn{
+        margin-left: -15px;
+        margin-top: 15px;
     }
 }
