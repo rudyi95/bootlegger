@@ -1,0 +1,21 @@
+
+.menu-list-container{
+    width: 250px !important;
+}
+
+
+
+@media screen and (max-width:1090px){
+    .menu-list{
+        z-index: 2;
+    }
+    .menu-list-container{
+        position: absolute;
+        width: 150px !important;
+        z-index: 10;
+    }
+    .list-item-icon{
+        display: none !important;
+    }
+    
+}

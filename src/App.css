@@ -6,7 +6,6 @@
   min-height: 100%;
   flex-direction: column;
   display: flex;
-  min-width: 900px;
 }
 
 html, #root, body {
@@ -37,4 +36,14 @@ body {
   margin:auto;
 }
 
- 
+@media screen and (max-width: 1090px) {
+  .app{
+    width: 414px !important;
+    height: 492px !important;
+  }
+  
+  .content{
+    max-width: 414px !important;
+  }
+  
+}

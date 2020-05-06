@@ -3,7 +3,17 @@
     margin-bottom:5px;
 }
 
-/* .footerItem:hover {
-    text-decoration: underline;
-    color: #4282ad;
-} */
+@media screen and (max-width: 1090px){
+    .footer-container{
+        width: 414px;
+    }
+    .buying-block{
+        width: 100px;
+    }
+    .about-block{
+        width: 80px;
+    }
+    .internet-block{
+        width: 80px;
+    }
+}

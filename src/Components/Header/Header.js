@@ -62,9 +62,7 @@ class ConnectedHeader extends Component {
           <div className="left-part"
           >
             <IconButton className="header-menu-btn"
-            style={{
-              marginLeft: -10
-            }}
+            
               onClick={() => {
                 this.props.dispatch(toggleMenu());
               }}

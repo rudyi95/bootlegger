@@ -13,6 +13,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 
+import "./Menu.css";
+
 const mapStateToProps = state => {
   return {
     showMenu: state.showMenu,
@@ -52,14 +54,14 @@ class ConnectedMenu extends Component {
 
   renderMenu(data) {
 
-    return (<List
-    >
-      {data
-        .map((x, i) => {
+    return (
+    <List>
+      {data.map((x, i) => {
 
           if (!x.children) {
             return (
               <NavLink
+              className="menu-list"
                 to={x.url}
                 exact
                 isActive={(param, location) => { return this.isMenuItemActive(x, location) }}
@@ -73,8 +75,8 @@ class ConnectedMenu extends Component {
                   fontWeight: "bold"
                 }}
               >
-                <ListItem dense button>
-                  <ListItemIcon>
+                <ListItem dense button >
+                  <ListItemIcon className="list-item-icon">
                     <Icon>{x.icon}</Icon>
                   </ListItemIcon>
                   <ListItemText
@@ -116,11 +118,10 @@ class ConnectedMenu extends Component {
 
 
   render() {
-    if (!this.props.showMenu) return null;
+    if (this.props.showMenu) return null;
     return (
-      <div style={{
-        backgroundColor: "#FAFAFB",
-        minWidth: 250
+      <div className="menu-list-container" style={{
+        backgroundColor: "#FAFAFB"
       }}>
         {/* Render our menu */}
         {this.renderMenu(this.state.dataForTheMenu)}

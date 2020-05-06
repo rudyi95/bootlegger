@@ -20,7 +20,7 @@ class ConnectedItem extends Component {
   render() {
     return (
       
-        <Card
+        <Card className="card-container"
           style={{ width: 200, height: 270, margin: 10, display: "inline-block", maxWidth: "300px" }}
         >
           <CardActionArea
@@ -29,10 +29,11 @@ class ConnectedItem extends Component {
             }}
           >
             <CardMedia
+              className="card-media"
               style={{ height: 140, backgroundSize: "contain" }}
               image={this.props.item.imageUrls[0]}
             />
-            <CardContent style={{ height: 50 }}>
+            <CardContent className="card-content" style={{ height: 50 }}>
               <div
                 style={{
                   marginLeft: 5,
@@ -53,10 +54,11 @@ class ConnectedItem extends Component {
           </CardActionArea>
 
           <CardActions
+          className="card-actions"
             style={{ display: "flex", alignItems: "center", height: 45 }}
           >
             <Button
-              size="small"
+            className="card-detail-btn"
               style={{ marginRight: 60, marginLeft: 8 }}
               onClick={() => {
                 this.props.history.push("/details/" + this.props.item.id);
@@ -77,7 +79,7 @@ class ConnectedItem extends Component {
                 color="primary"
                 aria-label="Add to shopping cart"
               >
-                <AddShoppingCartIcon size="small" />
+                <AddShoppingCartIcon  />
               </IconButton>
             </Tooltip>
           </CardActions>

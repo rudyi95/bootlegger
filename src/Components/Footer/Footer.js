@@ -6,6 +6,7 @@ class Footer extends Component {
   render() {
     return (
       <div
+        className="footer-container"
         style={{
           boxSizing: "border-box",
           padding: 10,
@@ -16,13 +17,14 @@ class Footer extends Component {
           display: "flex"
         }}
       >
-        <div>
-          <div
+        <div className="buying-block">
+          <div className="footer-block-title"
             style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
           >
             Покупка
           </div>
           <NavLink
+          className="buying-block-content"
             to={"/"}  // "/payment"
             exact
             style={{
@@ -37,6 +39,7 @@ class Footer extends Component {
             <div className="footerItem">Умови оплати</div>
           </NavLink>
           <NavLink
+          className="buying-block-content"
             to={"/"} // "/delivery"
             exact
             style={{
@@ -51,7 +54,7 @@ class Footer extends Component {
             <div className="footerItem">Доставка</div>
           </NavLink>
         </div>
-        <div>
+        <div className="about-block">
           <div
             style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
           >
@@ -72,7 +75,7 @@ class Footer extends Component {
             <div className="footerItem">Інформація про магазин</div>
           </NavLink>
         </div>
-        <div>
+        <div className="internet-block">
           <div
             style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
           >

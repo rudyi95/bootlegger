@@ -8,6 +8,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { withRouter } from "react-router-dom";
 
+import "./ProductsHeader.css";
+
 class ProductsHeader extends Component {
   state = {
     openPriceDialog: false
@@ -26,7 +28,7 @@ class ProductsHeader extends Component {
 
     let subtitle = (
       <React.Fragment>
-        <span style={{ fontSize: 12, color: "gray", marginTop: 5 }}>
+        <span className="res-count" style={{ fontSize: 12, color: "gray", marginTop: 5 }}>
           {" Результат" +
             (totalItemsCount === 1 ? " " : "и ") +
             totalItemsCount +
@@ -34,6 +36,7 @@ class ProductsHeader extends Component {
         </span>
         {keyword && (
           <span
+          className="res-count"
             style={{
               fontWeight: "bold",
               fontSize: 12,
@@ -51,13 +54,15 @@ class ProductsHeader extends Component {
       <div>
         <div style={{ padding: 10, display: "flex", alignItems: "center" }}>
           <div style={{ flex: 1, fontSize: 24 }}>
-            <div>{category ? category : "Акційний товар"}</div>
+            <div className="prod-head-cat">{category ? category : "Акційний товар"}</div>
             {subtitle}
           </div>
 
           <FormControlLabel
-            control={
-              <Checkbox
+              className="checkbox-filter"
+              control={
+              <Checkbox 
+              className="checkbox-filter"
                 color="primary"
                 checked={usePriceFilter}
                 onChange={e => {
@@ -70,6 +75,8 @@ class ProductsHeader extends Component {
             }
             label="Фільтрувати за ціною"
           />
+          
+
           {usePriceFilter && (
             <Tooltip title="Змінити діапазон цін" disableFocusListener>
               <Button

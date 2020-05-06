@@ -1,0 +1,13 @@
+
+
+@media screen and (max-width: 1090px) {
+    .res-count{
+        display: none;
+    }
+    .prod-head-cat{
+        font-size: 11px;
+    }
+    .checkbox-filter{
+        display: none !important;
+    }
+}
