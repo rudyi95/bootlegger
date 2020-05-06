@@ -46,7 +46,7 @@ body {
   .content{
     max-width: 414px !important;
     max-height: 570px !important;
-    overflow: scroll;
+    overflow-x: scroll;
   }
   
 }
