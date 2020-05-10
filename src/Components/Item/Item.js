@@ -50,7 +50,7 @@ class ConnectedItem extends Component {
               <div className="card-content-item-volume" style={{ margin: 5 }}>Об'єм: {this.props.item.volume}л.</div>
               <div className="card-content-item-price" style={{ margin: 5 }}>Ціна: {this.props.item.price} грн.</div>
             </div>
-            <div style={{ color: "#1a9349", fontWeight: "bold", margin: 8 }}>
+            <div className="item-popular" style={{ color: "#1a9349", fontWeight: "bold", margin: 8 }}>
               {this.props.item.popular && "Акційна ціна"}
             </div>
           </CardContent>

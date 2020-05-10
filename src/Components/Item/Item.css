@@ -17,6 +17,9 @@
         margin-left: -10px !important;
         white-space: nowrap !important;
     }
+    .item-popular{
+        width: 80px;
+    }
     .item-volume-price{
         width: 106px !important;
         margin-left: -15px !important;
