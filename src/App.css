@@ -41,6 +41,9 @@ body {
 }
 
 @media screen and (max-width: 1090px) {
+  html{
+    overflow: auto;
+  }
   .app{
     width: 414px !important;
     max-height: 100% !important;

@@ -1,24 +1,40 @@
 
 @media screen and (max-width: 1090px) {
     .card-container{
-        width: 180px !important;
+        width: 111px !important;
         height: 175px !important;
     }
     .card-media{
-        height: 70px !important;
+        height: 60px !important;
     }
     .card-content{
+        margin-top: 3px !important;
         font-size: 10px;
     }
+    .item-name-title{
+        width: 109px !important;
+        margin-top: -10px !important;
+        margin-left: -10px !important;
+        white-space: nowrap !important;
+    }
+    .item-volume-price{
+        width: 106px !important;
+        margin-left: -15px !important;
+        font-size: 10px !important;
+    }
     .card-actions{
+        display: flex;
+        justify-content: flex-start;
+        width: 100px !important;
         margin-top: -30px;
     }
     .card-detail-btn{
         margin-top: 15px !important;
-        margin-left: 0 !important;
+        margin-left: -10px !important;
         font-size: 12px !important;
     }
     .card-cart-btn{
         margin-top: 15px;
+        margin-left: -85px !important;
     }
 }

@@ -8,6 +8,8 @@ import Item from "../Item/Item";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
 
+import "./Details.css";
+
 
 
 class ConnectedDetails extends Component {
@@ -75,97 +77,68 @@ class ConnectedDetails extends Component {
     }
 
     return (
-      <div style={{ padding: 10 }}>
-        <div
-          style={{
-            marginBottom: 20,
-            marginTop: 10,
-            fontSize: 22
-          }}
-        >
+      <div className="details-container">
+
+        <div className="details-title">
           {this.state.item.name}
         </div>
-        <div style={{ display: "flex" }}>
-          <img src={this.state.item.imageUrls[0]} alt=""
-            style={{
-              width: 300,
-              maxHeight: 300,
-              border: "1px solid lightgray",
-              borderRadius: "5px",
-              backgroundSize: "contain"
-            }} />
-          <div
-            style={{
-              flex: 1,
-              marginLeft: 20,
-              display: "flex",
-              flexDirection: "column"
-            }}
-          >
+        <div className="details-item-container">
 
-            <div style={{
-              fontSize: 16,
+          <img src={this.state.item.imageUrls[0]} alt="" className="details-item-image" />
+          <div className="details-item-content">
 
-            }}>
+            <div className="item-price">
               Ціна: {this.state.item.price} грн.
             </div>
             {this.state.item.popular && (
-              <div style={{ fontSize: 14, marginTop: 5, color: "#228B22" }}>
+              <div className="item-promotional-price">
                 (Акційна ціна)
               </div>
             )}
-            <div style={{marginTop: 25}}>
+
+            <div className="item-volume-txt">
               Об'єм: {this.state.item.volume}л.
             </div>
-            <div style={{marginTop: 25}}>
+            <div className="item-category-txt">
               Категорія: {this.state.item.category}
             </div>
 
-            <TextField
-              type="number"
-              value={this.state.quantity}
-              style={{ marginTop: 20, marginBottom: 10, width: 70 }}
-              label="Кількість"
-              inputProps={{ min: 1, max: 10, step: 1 }}
-              onChange={e => {
-                this.setState({ quantity: parseInt(e.target.value) });
-              }}
-            />
-            <Button
-              style={{ width: 170, marginTop: 5 }}
-              color="primary"
-              variant="outlined"
-              onClick={() => {
-                this.props.dispatch(
-                  addItemInCart({
-                    ...this.state.item,
-                    quantity: this.state.quantity
-                  })
-                );
-              }}
-            >
-              У кошик <AddShoppingCartIcon style={{ marginLeft: 5 }} />
-            </Button>
+            <div className="item-input-cart-btn">
+              <TextField
+                type="number"
+                value={this.state.quantity}
+                style={{ marginTop: 20, marginBottom: 10, width: 70, }}
+                label="Кількість"
+                inputProps={{ min: 1, max: 10, step: 1 }}
+                onChange={e => {
+                  this.setState({ quantity: parseInt(e.target.value) });
+                }}
+              />
+              <Button
+                className="item-cart-btn"
+                color="primary"
+                variant="outlined"
+                onClick={() => {
+                  this.props.dispatch(
+                    addItemInCart({
+                      ...this.state.item,
+                      quantity: this.state.quantity
+                    })
+                  );
+                }}
+              >
+                У кошик <AddShoppingCartIcon style={{ marginLeft: 5 }} />
+              </Button>
+            </div>
           </div>
+
         </div>
 
         {/* Product description */}
-        <div
-          style={{
-            marginTop: 20,
-            marginBottom: 20,
-            fontSize: 22
-          }}
-        >
+        <div className="item-description-title">
           Опис
         </div>
-        <div
-          style={{
-            maxHeight: 200,
-            fontSize: 13,
-            overflow: "auto"
-          }}
-        >
+        <div className="item-description">
           {this.state.item.description ? this.state.item.description : "Відсутній"}
         </div>
 

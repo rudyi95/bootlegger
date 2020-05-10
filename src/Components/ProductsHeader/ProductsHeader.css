@@ -5,7 +5,8 @@
         display: none;
     }
     .prod-head-cat{
-        font-size: 11px;
+        font-size: 16px;
+        font-weight: 600;
     }
     .checkbox-filter{
         display: none !important;

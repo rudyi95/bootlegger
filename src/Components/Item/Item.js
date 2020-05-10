@@ -19,73 +19,76 @@ import "./Item.css";
 class ConnectedItem extends Component {
   render() {
     return (
-      
-        <Card className="card-container"
-          style={{ width: 200, height: 270, margin: 10, display: "inline-block", maxWidth: "300px" }}
+
+      <Card className="card-container"
+        style={{ width: 200, height: 270, margin: 10, display: "inline-block", maxWidth: "300px" }}
+      >
+        <CardActionArea
+          onClick={() => {
+            this.props.history.push("/details/" + this.props.item.id);
+          }}
         >
-          <CardActionArea
+          <CardMedia
+            className="card-media"
+            style={{ height: 140, backgroundSize: "contain" }}
+            image={this.props.item.imageUrls[0]}
+          />
+          <CardContent className="card-content" style={{ height: 50 }}>
+            <div
+              className="item-name-title"
+              style={{
+                marginLeft: 5,
+                fontWeight: "bold",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis"
+              }}
+            >
+              {this.props.item.name}
+            </div>
+            <div className="item-volume-price">
+              <div className="card-content-item-volume" style={{ margin: 5 }}>Об'єм: {this.props.item.volume}л.</div>
+              <div className="card-content-item-price" style={{ margin: 5 }}>Ціна: {this.props.item.price} грн.</div>
+            </div>
+            <div style={{ color: "#1a9349", fontWeight: "bold", margin: 8 }}>
+              {this.props.item.popular && "Акційна ціна"}
+            </div>
+          </CardContent>
+        </CardActionArea>
+
+        <CardActions
+          className="card-actions"
+          style={{ display: "flex", alignItems: "center", height: 45 }}
+        >
+          <Button
+            className="card-detail-btn"
+            style={{ marginRight: 60, marginLeft: 8 }}
             onClick={() => {
               this.props.history.push("/details/" + this.props.item.id);
             }}
           >
-            <CardMedia
-              className="card-media"
-              style={{ height: 140, backgroundSize: "contain" }}
-              image={this.props.item.imageUrls[0]}
-            />
-            <CardContent className="card-content" style={{ height: 50 }}>
-              <div
-                style={{
-                  marginLeft: 5,
-                  fontWeight: "bold",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis"
-                }}
-              >
-                {this.props.item.name}
-              </div>
-              <div style={{ margin: 5 }}>Об'єм: {this.props.item.volume}л.</div>
-              <div style={{ margin: 5 }}>Ціна: {this.props.item.price} грн.</div>
-              <div style={{ color: "#1a9349", fontWeight: "bold", margin: 5 }}>
-                {this.props.item.popular && "Акційна ціна"}
-              </div>
-            </CardContent>
-          </CardActionArea>
-
-          <CardActions
-          className="card-actions"
-            style={{ display: "flex", alignItems: "center", height: 45 }}
-          >
-            <Button
-            className="card-detail-btn"
-              style={{ marginRight: 60, marginLeft: 8 }}
-              onClick={() => {
-                this.props.history.push("/details/" + this.props.item.id);
-              }}
-            >
-              {" "}
+            {" "}
             Деталі
           </Button>
-            <Tooltip title="Додати у кошик">
-              <IconButton
-                size="small"
-                onClick={e => {
-                  e.stopPropagation();
-                  this.props.dispatch(
-                    addItemInCart({ ...this.props.item, quantity: 1 })
-                  );
-                }}
-                color="primary"
-                aria-label="Add to shopping cart"
-              >
-                <AddShoppingCartIcon 
-              className="card-cart-btn" />
-              </IconButton>
-            </Tooltip>
-          </CardActions>
-        </Card>
-      
+          <Tooltip title="Додати у кошик">
+            <IconButton
+              size="small"
+              onClick={e => {
+                e.stopPropagation();
+                this.props.dispatch(
+                  addItemInCart({ ...this.props.item, quantity: 1 })
+                );
+              }}
+              color="primary"
+              aria-label="Add to shopping cart"
+            >
+              <AddShoppingCartIcon
+                className="card-cart-btn" />
+            </IconButton>
+          </Tooltip>
+        </CardActions>
+      </Card>
+
     );
   }
 }
