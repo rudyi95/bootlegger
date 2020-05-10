@@ -38,6 +38,7 @@
     }
     .card-cart-btn{
         margin-top: 15px;
-        margin-left: -85px !important;
+        margin-left: -110px !important;
+        font-size: 18px !important;
     }
 }
